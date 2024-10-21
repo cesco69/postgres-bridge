@@ -26,7 +26,7 @@ const pool = new PostgresBridge(configuration);
 
 const connection = await pool.connect();
 
-await pg.query('SELECT $1::text as name', ['foo']);
+await connection.query('SELECT $1::text as name', ['foo']);
 ```
 
 ## Motivation
